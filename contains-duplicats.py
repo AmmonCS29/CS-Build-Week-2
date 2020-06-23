@@ -17,10 +17,19 @@ Planning:
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
+        # create a dictionary to store the values
         d = {}
+        
+        #iterate over the provided list of numbers
         for number in nums:
+            
+            #if the number is in the dictionary return true
             if number in d:
                 return True
+            
+            #else add the number to the dictionary with the value of 1
             else: 
                 d[number] = 1
+                
+        #if the value is not in the dictionary at all then retun false. 
         return False
